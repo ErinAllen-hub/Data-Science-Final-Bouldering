@@ -264,6 +264,10 @@ def app():
     ape = arm_span / height 
     pullup_ratio = (weight + max_pullups)/weight
 
+    if weight == 0:
+        weight = 1
+        print("Wow, You're so skinny ;)")
+    
     data = pd.DataFrame({'Sex': sex, 'Height (cm)': height, 'Weight (KG)': weight, 'Arm Span (cm)': arm_span,
             'How long have you been climbing for?': climbing_experience,
             'Frequency of climbing sessions per week': frequency_sessions,
