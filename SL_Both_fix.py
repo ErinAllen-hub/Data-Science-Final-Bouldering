@@ -248,6 +248,9 @@ def app():
     sex = sex_mapping[sex]
     height = st.number_input('Height (cm)', value = 1, step = 1)
     weight = st.number_input('Weight (KG)', value = 1, step = 1)
+    if weight == 0:
+        weight = 1
+        print("Wow, You're so skinny ;)")
     arm_span = st.number_input('Arm Span (cm)', value = 1, step = 1)
     climbing_experience = st.number_input('How long have you been climbing for (years)?', step = 1)
     frequency_sessions = st.number_input('Frequency of climbing sessions per week', step = 1)
@@ -264,9 +267,6 @@ def app():
     ape = arm_span / height 
     pullup_ratio = (weight + max_pullups)/weight
 
-    if weight == 0:
-        weight = 1
-        print("Wow, You're so skinny ;)")
     
     data = pd.DataFrame({'Sex': sex, 'Height (cm)': height, 'Weight (KG)': weight, 'Arm Span (cm)': arm_span,
             'How long have you been climbing for?': climbing_experience,
