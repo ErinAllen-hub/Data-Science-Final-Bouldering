@@ -260,9 +260,9 @@ def app():
     strength_time = st.number_input('Time spent General strength training per week (hours)')
     max_pullups = st.number_input('Max pull up reps')
     max_pushups = st.number_input('Max push ups reps')
-    bmi = calculate_bmi(weight, height)
-    ape = calculate_ape_index(height, arm_span)
-    pullup_ratio = calculate_pullup_ratio(max_pullups, weight)
+    bmi = weight / ((height*100)**2)
+    ape = arm_span / height 
+    pullup_ratio = (weight + max_pullups)/weight
 
     data = pd.DataFrame({'Sex': sex, 'Height (cm)': height, 'Weight (KG)': weight, 'Arm Span (cm)': arm_span,
             'How long have you been climbing for?': climbing_experience,
