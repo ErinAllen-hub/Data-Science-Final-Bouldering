@@ -250,7 +250,7 @@ def app():
     weight = st.number_input('Weight (KG)', value = 1, step = 1)
     if weight == 0:
         weight = 1
-        print("Wow, You're so skinny ;)")
+        st.write(f"Wow, You're so skinny ;)")
     arm_span = st.number_input('Arm Span (cm)', value = 1, step = 1)
     climbing_experience = st.number_input('How long have you been climbing for (years)?', step = 1)
     frequency_sessions = st.number_input('Frequency of climbing sessions per week', step = 1)
