@@ -246,9 +246,9 @@ def app():
     sex_mapping = {'Male': 1, 'Female': 2}
     sex = st.selectbox('Sex', list(sex_mapping.keys()), format_func=lambda x: x)
     sex = sex_mapping[sex]
-    height = st.number_input('Height (cm)', value = 1, step=int)
-    weight = st.number_input('Weight (KG)', value = 1, step=int)
-    arm_span = st.number_input('Arm Span (cm)', value = 1, step=int)
+    height = st.number_input('Height (cm)', value = 1, step="int")
+    weight = st.number_input('Weight (KG)', value = 1, step="int")
+    arm_span = st.number_input('Arm Span (cm)', value = 1, step="int")
     climbing_experience = st.number_input('How long have you been climbing for (years)?')
     frequency_sessions = st.number_input('Frequency of climbing sessions per week')
     avg_hours_climbing = st.number_input('Average hours climbing per week (not including training)')
@@ -258,7 +258,7 @@ def app():
     endurance_freq = st.number_input('Frequency of Endurance training sessions per week')
     strength_freq = st.number_input('General Strength Training frequency per week')
     strength_time = st.number_input('Time spent General strength training per week (hours)')
-    max_pullups = st.number_input('Max pull up reps', value = 1, step=int) 
+    max_pullups = st.number_input('Max pull up reps', value = 1, step="int") 
     max_pushups = st.number_input('Max push-ups reps')
     bmi = weight / ((height*100)**2)
     ape = arm_span / height 
