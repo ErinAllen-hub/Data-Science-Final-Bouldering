@@ -260,7 +260,7 @@ def app():
     strength_time = st.number_input('Time spent General strength training per week (hours)', step = 0.25)
     max_pullups = st.number_input('Max pull up reps', value = 1, step = 1) 
     max_pushups = st.number_input('Max push-ups reps', step = 1)
-    bmi = weight / ((height*100)**2)
+    bmi = weight / ((height/100)**2)
     ape = arm_span / height 
     pullup_ratio = (weight + max_pullups)/weight
 
